@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Euro Score Tracker!</h1>
+    {% for player in players %}
+        <h5>{{player.name_of_person}}</h5>
+        <div class="myProgress">
+            <div class="myBar {{player.name_of_person}}">{{player.current_score}}</div>
+        </div>
+
+        <input type="number" id="{{player.name_of_person}}_score" class="hide" value="{{player.current_score}}">
+    {% endfor %}
+{% endblock %}
+
