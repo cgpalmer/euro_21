@@ -1,1 +1,1 @@
-web: python manage.py
+web: gunicorn euros.wsgi:application
