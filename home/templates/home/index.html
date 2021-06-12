@@ -23,13 +23,15 @@
             <div class="col-3"><h5>Team 1</h5></div>
             <div class="col-3"><h5>Team 2</h5></div>
             <div class="col-3"><h5>Team 3</h5></div>
-        
+            <hr>
         {% for person in teams %}
             <div class="col-3">{{person.name_of_person}}</div>
             <div class="col-3">{{person.team_1}}</div>
             <div class="col-3">{{person.team_2}}</div>
             <div class="col-3">{{person.team_3}}</div>
+            <hr>
         {% endfor %}
+    
         </div>
     </div>
     
