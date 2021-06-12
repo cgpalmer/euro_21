@@ -3,7 +3,7 @@ from .models import Players, Teams
 
 # Create your views here.
 def index(request):
-    players = Players.objects.all()
+    players = Players.objects.all().order_by('-current_score')
     teams = Teams.objects.all()
     context = {
         'players': players,
