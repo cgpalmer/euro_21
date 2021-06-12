@@ -25,4 +25,4 @@ class TeamsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Players, PlayersAdmin)
-admin.site.register(Players, TeamsAdmin)
+admin.site.register(Teams, TeamsAdmin)
