@@ -18,7 +18,7 @@ class TeamsAdmin(admin.ModelAdmin):
         'team_3',
     )
 
-    ordering = ('current_score',)
+
 
 
 
