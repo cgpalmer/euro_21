@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Players
+from .models import Players, Teams
 
 # Create your views here.
 def index(request):
