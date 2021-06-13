@@ -5,6 +5,8 @@ from .models import Players, Teams
 def index(request):
     players = Players.objects.all().order_by('-current_score')
     teams = Teams.objects.all()
+    goals_for = Players.objects.all().order_by('-total_goals_for')
+    goals_against = Players.objects.all().order_by('-total_goals_against')
     context = {
         'players': players,
         'teams': teams

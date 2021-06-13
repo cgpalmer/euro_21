@@ -33,11 +33,11 @@
         <div class="row">
             <a id="total_goals_for"></a>
             <h2 class="text-center my-5">Total Goals Scored - Golden Boot Award</h2>
-            {% for player in players %}
+            {% for player in goals_for %}
             
             <div class="col-6 text-center">
                     <h5>{{player.name_of_person}}</h5>
-                        <div class="myProgress_gf">
+                        <div class="myProgress">
                             <div class="myBar {{player.name_of_person}}_gf">{{player.total_goals_for}}</div>
                         </div>
                         <input type="number" id="{{player.name_of_person}}_gf" class="hide" value="{{player.total_goals_for}}">
@@ -48,7 +48,7 @@
         <div class="row">
             <a id="total_goals_against"></a>
             <h2 class="text-center my-5">Total Goals Let In - Butter Fingers Award</h2>
-            {% for player in players %}
+            {% for player in goals_against %}
             
             <div class="col-6 text-center">
                     <h5>{{player.name_of_person}}</h5>

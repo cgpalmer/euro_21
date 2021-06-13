@@ -6,6 +6,8 @@ class PlayersAdmin(admin.ModelAdmin):
     list_display = (
         'name_of_person',
         'current_score',
+        'total_goals_for',
+        'total_goals_against'
     )
 
     ordering = ('current_score',)
