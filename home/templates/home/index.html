@@ -16,6 +16,7 @@
 
         <div class="row">
             <a id="scores"></a>
+            <h2 class="text-center my-5">Total Scores Tracker - Best Team Collection</h2>
             {% for player in players %}
             
             <div class="col-6 text-center">
@@ -28,9 +29,40 @@
             
                 {% endfor %}
         </div>
+
+        <div class="row">
+            <a id="total_goals_for"></a>
+            <h2 class="text-center my-5">Total Goals Scored - Golden Boot Award</h2>
+            {% for player in players %}
+            
+            <div class="col-6 text-center">
+                    <h5>{{player.name_of_person}}</h5>
+                        <div class="myProgress_gf">
+                            <div class="myBar {{player.name_of_person}}_gf">{{player.total_goals_for}}</div>
+                        </div>
+                        <input type="number" id="{{player.name_of_person}}_gf" class="hide" value="{{player.total_goals_for}}">
+            </div>          
+            
+                {% endfor %}
+        </div>
+        <div class="row">
+            <a id="total_goals_against"></a>
+            <h2 class="text-center my-5">Total Goals Let In - Butter Fingers Award</h2>
+            {% for player in players %}
+            
+            <div class="col-6 text-center">
+                    <h5>{{player.name_of_person}}</h5>
+                        <div class="myProgress">
+                            <div class="myBar {{player.name_of_person}}_ga">{{player.total_goals_against}}</div>
+                        </div>
+                        <input type="number" id="{{player.name_of_person}}_ga" class="hide" value="{{player.total_goals_against}}">
+            </div>          
+            
+                {% endfor %}
+        </div>
         <a id="teams"></a>
+        <h2 class="text-center mt-5 mb-3">Teams</h2>
         <div class="row mt-5 text-center">
-            <hr>
         {% for person in teams %}
         
             <div class="col-12 my-3  text-center"><h5>{{person.name_of_person}}</h5></div>
@@ -45,6 +77,7 @@
         </div>
 
         <a id="scoring_system"></a>
+        <h2 class="text-center mt-5 mb-3">Scoring System</h2>
         <div class="row text-center mt-5">
             
                 <h5  class="col-6">Condition</h5>
