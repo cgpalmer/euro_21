@@ -4,19 +4,20 @@
 {% block content %}
 
 
-
+    <div class="fixed-top header">
     <h1 class="text-center">Euro Score Tracker!</h1>
-    <div class="inline text-center my-5">
+    <div class="inline text-center mt-5 mb-3">
         <a class="mx-1" href="#scores">Score Tracker</a>
         <a class="mx-1" href="#teams">Teams</a>
         <a class="mx-1" href="#scoring_system">Scoring system</a>
+    </div>
     </div>
 
     <div class="container">
 
         <div class="row">
             <a id="scores"></a>
-            <h2 class="text-center my-5">Total Scores Tracker - Best Team Collection</h2>
+            <h2 class="text-center my-5 padding_buffer">Total Scores Tracker - Best Team Collection</h2>
             {% for player in players %}
             
             <div class="col-6 text-center">
@@ -31,7 +32,7 @@
         </div>
 
         <div class="row">
-            <a id="total_goals_for"></a>
+            <a id="total_goals_for" ></a>
             <h2 class="text-center my-5">Total Goals Scored - Golden Boot Award</h2>
             {% for player in goals_for %}
             
@@ -59,10 +60,12 @@
             </div>          
             
                 {% endfor %}
-        </div>
-        <a id="teams"></a>
-        <h2 class="text-center mt-5 mb-3">Teams</h2>
-        <div class="row mt-5 text-center">
+       
+            </div>
+        
+         <a id="teams"></a>
+        <div class="row padding_buffer mt-5 text-center">
+        <h2 class="text-center">Teams</h2>
         {% for person in teams %}
         
             <div class="col-12 my-3  text-center"><h5>{{person.name_of_person}}</h5></div>
@@ -77,9 +80,9 @@
         </div>
 
         <a id="scoring_system"></a>
-        <h2 class="text-center mt-5 mb-3">Scoring System</h2>
+       
         <div class="row text-center mt-5">
-            
+            <h2 class="text-center mt-5 mb-3">Scoring System</h2> 
                 <h5  class="col-6">Condition</h5>
                 <h5  class="col-6">Points</h5>
                 <hr>

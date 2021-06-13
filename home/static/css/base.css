@@ -23,3 +23,11 @@ html {
     text-align: center;
     width: 70%;
 }
+
+.header {
+    background-color: white;
+}
+
+.padding_buffer{
+    padding-top: 6rem;
+}
