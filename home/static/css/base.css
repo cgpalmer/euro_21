@@ -18,3 +18,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+.hr-width{
+    text-align: center;
+    width: 70%;
+}

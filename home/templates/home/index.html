@@ -30,17 +30,16 @@
         </div>
         <a id="teams"></a>
         <div class="row mt-5 text-center">
-            <div class="col-3"><h5>Name</h5></div>
-            <div class="col-3"><h5>Team 1</h5></div>
-            <div class="col-3"><h5>Team 2</h5></div>
-            <div class="col-3"><h5>Team 3</h5></div>
             <hr>
         {% for person in teams %}
-            <div class="col-3">{{person.name_of_person}}</div>
-            <div class="col-3">{{person.team_1}}</div>
-            <div class="col-3">{{person.team_2}}</div>
-            <div class="col-3">{{person.team_3}}</div>
-            <hr>
+        
+            <div class="col-12 my-3  text-center"><h5>{{person.name_of_person}}</h5></div>
+            <div class="col-4">{{person.team_1}}</div>
+            <div class="col-4">{{person.team_2}}</div>
+            <div class="col-4">{{person.team_3}}</div>
+            <hr class="mt-3">
+            
+            
         {% endfor %}
     
         </div>
