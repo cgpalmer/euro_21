@@ -29,7 +29,10 @@ class Individual_teamsAdmin(admin.ModelAdmin):
 
 class MatchesAdmin(admin.ModelAdmin):
     list_display = (
-        'name_of_person',
+        'name_of_person_1',
+        'name_of_person_2',
+        'team_1',
+        'team_2'
     )
 
 

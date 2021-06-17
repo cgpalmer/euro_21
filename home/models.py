@@ -17,6 +17,10 @@ class Teams(models.Model):
     team_1 = models.CharField(max_length=254, null=True, blank=True)
     team_2 = models.CharField(max_length=254, null=True, blank=True)
     team_3 = models.CharField(max_length=254, null=True, blank=True)
+    auto_team_1 = models.ForeignKey('Individual_teams', null=True, blank=True, on_delete=models.SET_NULL, related_name="player_team_1")
+    auto_team_2 = models.ForeignKey('Individual_teams', null=True, blank=True, on_delete=models.SET_NULL, related_name="player_team_2")
+    auto_team_3 = models.ForeignKey('Individual_teams', null=True, blank=True, on_delete=models.SET_NULL, related_name="player_team_3")
+
    
     def __str__(self):
         return self.name_of_person
@@ -24,7 +28,8 @@ class Teams(models.Model):
 
 
 class Matches(models.Model):
-    name_of_person = models.ForeignKey('Players', null=True, blank=True, on_delete=models.SET_NULL, related_name="Player")
+    name_of_person_1 = models.ForeignKey('Players', null=True, blank=True, on_delete=models.SET_NULL, related_name="Player_1")
+    name_of_person_2 = models.ForeignKey('Players', null=True, blank=True, on_delete=models.SET_NULL, related_name="Player_2")
     team_1 = models.ForeignKey('Individual_teams', null=True, blank=True, on_delete=models.SET_NULL, related_name="team_1")
     team_2 = models.ForeignKey('Individual_teams', null=True, blank=True, on_delete=models.SET_NULL, related_name="team_2")
     team_1_goals = models.IntegerField(null=True, blank=True, default=0)
