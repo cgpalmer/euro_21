@@ -62,6 +62,21 @@
                 {% endfor %}
        
             </div>
+        <div class="row">
+            <a id="butter_feet" ></a>
+            <h2 class="text-center my-5">Total Own Goals - Butter Feet Award</h2>
+            {% for player in own_goals %}
+            
+            <div class="col-6 text-center">
+                    <h5>{{player.name_of_person}}</h5>
+                        <div class="myProgress">
+                            <div class="myBar {{player.name_of_person}}_og">{{player.own_goals}}</div>
+                        </div>
+                        <input type="number" id="{{player.name_of_person}}_og" class="hide" value="{{player.own_goals}}">
+            </div>          
+            
+                {% endfor %}
+        </div>
         
          <a id="teams"></a>
         <div class="row padding_buffer mt-5 text-center">

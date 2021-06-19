@@ -8,6 +8,7 @@ class Players(models.Model):
     current_score = models.IntegerField(null=True, blank=True)
     total_goals_for = models.IntegerField(null=True, blank=True)
     total_goals_against = models.IntegerField(null=True, blank=True)
+    own_goals = models.IntegerField(null=True, blank=True)
    
     def __str__(self):
         return self.name_of_person
