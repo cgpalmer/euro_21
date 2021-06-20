@@ -30,7 +30,7 @@ const names_of_players = ["Joe", "Maddie", "Chris", "Shannon", "Tori", "Jack", "
         console.log(names_of_players[i]);
     }
 
-     for (i = 0; i < names_of_players.length; i++) {
+    for (i = 0; i < names_of_players.length; i++) {
         console.log(`${names_of_players[i]}_og`);
         let score_value = $(`#${names_of_players[i]}_og`).val();
       
