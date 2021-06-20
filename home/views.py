@@ -16,7 +16,7 @@ def index(request):
         'goals_for': goals_for,
         'goals_against': goals_against,
         'own_goals': own_goals,
-    }
+        }
     return render(request, 'home/index.html', context)
 
 @login_required
@@ -25,7 +25,7 @@ def add_match(request, match_id):
         form = MatchesForm(request.POST, request.FILES)
         if form.is_valid():
             user = request.user
-          
+            form.save()
             return render(request, 'home/index.html', context)
         else:
             return render(request, 'home/index.html', context)

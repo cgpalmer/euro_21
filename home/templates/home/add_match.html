@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="">
+
+<h3>Match scores</h3>
+
+ <form method="POST" action="{% url 'add_match' %}" class="" enctype="multipart/form-data">
+                    <div class="forms_width">
+                         {% csrf_token %}
+                        {{ form|crispy }}
+                    <div class="">
+                        <button class="btn action-btn btn-lg rounded-0 mb-3 col-12" type="submit">Add Match <i class="fas fa-chevron-right"></i></button>
+                        
+                    </div>
+                    </div>
+                   
+                </form>
+
+
+</div>
+<hr>
+
+<h3>Knockout form</h3>
+    
+{% endblock %}
+

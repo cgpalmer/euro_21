@@ -31,3 +31,7 @@ html {
 .padding_buffer{
     padding-top: 6rem;
 }
+
+.forms_width{
+    width: 70%;
+}
