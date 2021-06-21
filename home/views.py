@@ -10,6 +10,7 @@ def index(request):
     goals_for = Players.objects.all().order_by('-total_goals_for')
     goals_against = Players.objects.all().order_by('-total_goals_against')
     own_goals = Players.objects.all().order_by('-own_goals')
+    
     context = {
         'players': players,
         'teams': teams,
@@ -23,6 +24,7 @@ def index(request):
 def add_match(request, match_id):
     if request.method == 'POST':
         form = MatchesForm(request.POST, request.FILES)
+        knockout_form = KnockoutForm(request.POST, request.FILES)
         if form.is_valid():
             user = request.user
             form.save()
