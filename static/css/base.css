@@ -14,3 +14,7 @@
 .hide{
     display: none;
 }
+
+.greyed_out {
+    color: lightgrey;
+}
