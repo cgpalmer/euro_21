@@ -86,21 +86,21 @@
         
             <div class="col-12 my-3  text-center"><h5>{{person.name_of_person}}</h5></div>
             {% if person.auto_team_1.team_knocked_out_groups is True %}
-            <div class="col-4">{{person.auto_team_1}}</div>
+            <div class="col-4  greyed_out">{{person.auto_team_1}}</div>
             {% else %}
-            <div class="col-4 greyed_out"> {{person.auto_team_1}}</div>
+            <div class="col-4"> {{person.auto_team_1}}</div>
             {% endif %}
 
             {% if person.auto_team_2.team_knocked_out_groups is True %}
-            <div class="col-4">{{person.auto_team_2}}</div>
+            <div class="col-4  greyed_out">{{person.auto_team_2}}</div>
             {% else %}
-            <div class="col-4 greyed_out"> {{person.auto_team_2}}</div>
+            <div class="col-4"> {{person.auto_team_2}}</div>
             {% endif %}
 
             {% if person.auto_team_3.team_knocked_out_groups is True %}
-            <div class="col-4">{{person.auto_team_3}}</div>
+            <div class="col-4  greyed_out">{{person.auto_team_3}}</div>
             {% else %}
-            <div class="col-4 greyed_out"> {{person.auto_team_3}}</div>
+            <div class="col-4"> {{person.auto_team_3}}</div>
             {% endif %}
           
             <hr class="mt-3">
