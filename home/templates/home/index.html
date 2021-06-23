@@ -15,7 +15,88 @@
     </div>
 
     <div class="container">
-
+        <div class="row my-5 padding_buffer text-center">
+            <div class="col-12 col-lg-6">
+                <div class="row  mb-4">
+                    <div class="col-5">Team 1</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Team 2</div>
+                    <div class="col-5">Wales</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Denmark</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="row mb-4 ">
+                    <div class="col-5">Team 3</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Team 4</div>
+                    <div class="col-5">Italy</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Austria</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="row mb-4">
+                    <div class="col-5">Team 5</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Team 6</div>
+                    <div class="col-5">Netherlands</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">TBD</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="row mb-4">
+                    <div class="col-5">Team 7</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Team 8</div>
+                    <div class="col-5">Belgium</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">TBD</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="row mb-4">
+                    <div class="col-5">Team 9</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Team 10</div>
+                    <div class="col-5">Croatia</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Spain</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="row mb-4">
+                    <div class="col-5">Team 11</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Team 12</div>
+                    <div class="col-5">TBD</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">TBD</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="row mb-4">
+                    <div class="col-5">Team 13</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Team 14</div>
+                    <div class="col-5">England</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">TBD</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="row mb-4">
+                    <div class="col-5">Team 15</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">Team 16</div>
+                    <div class="col-5">TBD</div>
+                    <div class="col-2">Vs</div>
+                    <div class="col-5">TBD</div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <a id="scores"></a>
             <h2 class="text-center my-5 padding_buffer">Total Scores Tracker - Best Team Collection</h2>
@@ -88,19 +169,19 @@
             {% if person.auto_team_1.team_knocked_out_groups is True %}
             <div class="col-4 greyed"><del>{{person.auto_team_1}}</del></div>
             {% else %}
-            <div class="col-4"> {{person.auto_team_1}}</div>
+            <div class="col-4 still_in"> {{person.auto_team_1}}</div>
             {% endif %}
 
             {% if person.auto_team_2.team_knocked_out_groups is True %}
-            <div class="col-4 greyed"><del>{{person.auto_team_2}}</del></div>
+            <div class="col-4 greyed"><del class="">{{person.auto_team_2}}</del></div>
             {% else %}
-            <div class="col-4">{{person.auto_team_2}}</div>
+            <div class="col-4 still_in">{{person.auto_team_2}}</div>
             {% endif %}
 
             {% if person.auto_team_3.team_knocked_out_groups is True %}
             <div class="col-4 greyed"><del>{{person.auto_team_3}}</del></div>
             {% else %}
-            <div class="col-4"> {{person.auto_team_3}}</div>
+            <div class="col-4 still_in"> {{person.auto_team_3}}</div>
             {% endif %}
           
             <hr class="mt-3">

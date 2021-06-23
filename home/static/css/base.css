@@ -35,3 +35,11 @@ html {
 .forms_width{
     width: 70%;
 }
+
+.greyed{
+    color: lightgray;
+}
+
+.still_in{
+    background-color: lightgreen;
+}
